@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./biaoer.css" />
+    <style>
+      .nav {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .nav > span {
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <span onclick="msgFN()">提示框</span>
+      <span onclick="altFN()">普通框</span>
+      <span onclick="IframeDialogFN()">内嵌层</span>
+    </div>
+  </body>
+  <script src="./style copy.js"></script>
+  <script>
+    console.log(biaoer);
+
+    function msgFN() {
+      biaoer.msg({}, function () {
+        console.log("msg...");
+      });
+    }
+
+    function altFN() {
+      biaoer.alert(
+        {
+          content: "<h1>一级标题</h1>",
+        },
+        function () {
+          console.log("alt...");
+        }
+      );
+    }
+
+    function IframeDialogFN() {
+      biaoer.iframe({
+        content: "./ahh.html",
+      });
+    }
+  </script>
+</html>

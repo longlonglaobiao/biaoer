@@ -1,0 +1,121 @@
+.biaoer-dialog {
+  font-family: "黑体", "宋体";
+  font-size: 16px;
+  position: absolute;
+  display: inline-block;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+  width: 200px;
+  height: auto;
+  left: 50%;
+  margin-top: 200px;
+}
+
+.biaoer-dialog .biaoer-title {
+  padding: 15px;
+  background: #f2f2f2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.biaoer-dialog .biaoer-title:hover {
+  cursor: move;
+}
+
+.biaoer-dialog .biaoer-content {
+  padding: 15px;
+  height: 100%;
+  background: white;
+}
+
+.biaoer-dialog .biaoer-x {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 5);
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  position: absolute;
+  background: white;
+  margin-top: -45px;
+  text-align: center;
+}
+
+.biaoer-dialog .biaoer-x:hover {
+  cursor: pointer;
+}
+.biaoer-dialog .biaoer-btnGroup {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.biaoer-dialog .biaoer-btnGroup button {
+  width: 80px;
+  height: 30px;
+  background: #1e90ff;
+  border: none;
+  color: white;
+}
+.biaoer-dialog .biaoer-btnGroup button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.biaoer-dialog .biaoer-succBtn {
+}
+
+.biaoer-dialog .biaoer-failBtn {
+  margin-left: 20px;
+}
+
+.biaoer-msg {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  display: inline-block;
+  color: white;
+  height: auto;
+  padding: 20px;
+  left: 50%;
+  margin-top: 200px;
+  animation: shake 0.3s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  12% {
+    transform: translateX(-25px);
+  }
+  24% {
+    transform: translateX(0px);
+  }
+  36% {
+    transform: translateX(25px);
+  }
+  48% {
+    transform: translateX(0px);
+  }
+  60% {
+    transform: translateX(-25px);
+  }
+  72% {
+    transform: translateX(0px);
+  }
+  84% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+html.body {
+  margin: 0;
+  padding: 0;
+}
+
+.biaoer-iframe {
+  border: none;
+}
