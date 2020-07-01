@@ -53,13 +53,24 @@ class baseDialog {
 
   // 关闭弹框
   close() {
+    let mask = document.getElementsByClassName("biaoer-mask")[0];
+    document.body.removeChild(mask);
+    //console.log(mask);
     this.that.elem.parentNode.removeChild(this.that.elem); //.style = "display:none";
-    document.querySelector("body").style.background = "";
   }
 
   //  遮罩
   maskable() {
-    document.querySelector("body").style.background = "rgba(0,0,0,0.3)";
+    let mask = document.getElementsByClassName("biaoer-dialog")[0];
+    if (!!mask) {
+      return;
+    }
+
+    //document.body.removeChild(mask);
+
+    mask = document.createElement("div");
+    mask.classList.add("biaoer-mask");
+    parent.document.body.appendChild(mask);
   }
 
   // 渲染
